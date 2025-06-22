@@ -1,6 +1,6 @@
 # Overview
 
-This project uses langchain (currently only OpenAPI) to search a Django model.
+This project uses langchain (currently only OpenAI) to search a Django model.
 Simply use LangChainSearchMixin in your view, and let the user perform
 a query with the `?q=` parameter.
 Example:
@@ -24,7 +24,7 @@ To add to your django project
 Add this to apps: `'langchain_search'`
 
 
-You need to also set your openapi key
+You need to also set your openai key
 
 ```
 export OPENAI_API_KEY=....
