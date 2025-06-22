@@ -1,3 +1,16 @@
+# Overview
+
+This project uses langchain (currently only OpenAPI) to search a Django model.
+Simply use LangChainSearchMixin in your view, and let the user perform
+a query with the `?q=` parameter.
+Example:
+```
+http://127.0.0.1:8000/api/jobs/?q=Engineer jobs posted after or on June 22 2025 salary minimum 40000 hybrid
+```
+
+The human language query will be converted to your model fields using LangChain
+and ChatGPT.
+
 # Installation
 
 
@@ -9,6 +22,14 @@ uv sync --frozen
 
 To add to your django project
 Add this to apps: `'langchain_search'`
+
+
+You need to also set your openapi key
+
+```
+export OPENAI_API_KEY=....
+```
+
 
 # Usage example
 
