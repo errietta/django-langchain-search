@@ -52,6 +52,9 @@ def get_llm_filter(queryset: QuerySet, query_text: str, **kwargs: ModelSettings)
     }
     ```
     """
+    if not queryset or not query_text:
+        return {}
+
     opts = {
         "model": kwargs.get("model", "gpt-4.1"),
         "temperature": kwargs.get("temperature", 0.0),
