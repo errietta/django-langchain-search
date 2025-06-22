@@ -26,3 +26,5 @@ class JobListAPI(LangChainSearchMixin, generics.ListAPIView):
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
 ```
+
+Example project: https://github.com/errietta/django-langchain-search-example
