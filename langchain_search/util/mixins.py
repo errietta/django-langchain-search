@@ -8,7 +8,6 @@ class LangChainSearchMixin():
         queryset = super().get_queryset()
         search_query = self.request.GET.get(
             settings.LANGCHAIN_SEARCH_QUERY_PARAM,
-            'q'
         )
         if search_query:
             filter = get_llm_filter(
