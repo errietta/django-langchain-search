@@ -1,5 +1,8 @@
 # Overview
 
+[![PyPI version](https://img.shields.io/pypi/v/langchain-search-django.svg)](https://pypi.org/project/langchain-search-django/)
+
+
 This project uses langchain (currently only OpenAI) to search a Django model.
 Simply use LangChainSearchMixin in your view, and let the user perform
 a query with the `?q=` parameter.
